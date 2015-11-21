@@ -1,1 +1,2 @@
-# java-experimental
+# dojo
+Coding katas in Java

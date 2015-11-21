@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+apply from: 'libs.gradle'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile libs['guava']
+    compile libs['lombok']
+    testCompile libs['junit']
+    testCompile libs['hamcrest']
+    testCompile libs['mockito']
+}
