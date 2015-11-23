@@ -1,7 +1,10 @@
 package storage.query.mariadb;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import storage.query.QueryBuilder;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class MariaDBQueryBuilder implements QueryBuilder {
 
     public static final String SELECT = "SELECT ";
@@ -11,6 +14,10 @@ public class MariaDBQueryBuilder implements QueryBuilder {
     public static final String LINE_TERMINATOR = ";";
 
     private final StringBuilder builder = new StringBuilder();
+
+    public static QueryBuilder createQueryBuilder() {
+        return new MariaDBQueryBuilder();
+    }
 
     @Override
     public QueryBuilder select() {
