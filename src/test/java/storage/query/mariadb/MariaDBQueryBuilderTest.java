@@ -17,7 +17,13 @@ public class MariaDBQueryBuilderTest {
     @Test
     public void createQueryWithOnlySelectPart() {
         MariaDBQueryBuilder builder = new MariaDBQueryBuilder();
-        assertThat(builder.select().build(), is("SELECT "));
+        assertThat(builder.select().build(), is("SELECT ;"));
+    }
+
+    @Test
+    public void createSelectAllColumnsAndRowsQuery() {
+        MariaDBQueryBuilder builder = new MariaDBQueryBuilder();
+        assertThat(builder.select().wildcard().from().table("dummytable").build(), is("SELECT * FROM dummytable ;"));
     }
 
 }

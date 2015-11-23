@@ -5,4 +5,10 @@ public interface QueryBuilder {
     QueryBuilder select();
 
     String build();
+
+    QueryBuilder wildcard();
+
+    QueryBuilder from();
+
+    QueryBuilder table(String dummytable);
 }
