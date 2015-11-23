@@ -6,7 +6,7 @@ import storage.query.QueryBuilder;
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-import static storage.query.mariadb.MariaDBQueryBuilder.*;
+import static storage.query.QueryBuilderFactory.*;
 
 public class MariaDBQueryBuilderTest {
 
