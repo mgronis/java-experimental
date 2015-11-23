@@ -2,6 +2,7 @@ package storage.db.mariadb;
 
 import storage.db.DatabaseConnection;
 import storage.query.QueryBuilder;
+import storage.query.QueryBuilderFactory;
 import storage.query.mariadb.MariaDBQueryBuilder;
 
 import java.sql.Connection;
@@ -19,7 +20,7 @@ public class MariaDBConnection implements DatabaseConnection {
 
     @Override
     public QueryBuilder queryBuilder() {
-        return new MariaDBQueryBuilder();
+        return QueryBuilderFactory.createQueryBuilder();
     }
 
     @Override
@@ -29,8 +30,6 @@ public class MariaDBConnection implements DatabaseConnection {
 
     @Override
     public void close() throws Exception {
-
         connection.close();
-
     }
 }
