@@ -44,7 +44,8 @@ public class MariaDBQueryBuilder implements QueryBuilder {
 
     @Override
     public QueryBuilder table(String table) {
-        builder.append(table.trim() + EXTRA_SPACE);
+        String tableName = table.trim() + EXTRA_SPACE;
+        builder.append(tableName);
         return this;
     }
 

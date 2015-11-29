@@ -10,5 +10,5 @@ public interface QueryBuilder {
 
     QueryBuilder from();
 
-    QueryBuilder table(String dummytable);
+    QueryBuilder table(String table);
 }

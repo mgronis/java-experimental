@@ -3,11 +3,8 @@ package storage.db.mariadb;
 import storage.db.DatabaseConnection;
 import storage.query.QueryBuilder;
 import storage.query.QueryBuilderFactory;
-import storage.query.mariadb.MariaDBQueryBuilder;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class MariaDBConnection implements DatabaseConnection {
 
@@ -24,8 +21,20 @@ public class MariaDBConnection implements DatabaseConnection {
     }
 
     @Override
-    public void executeQuery(){
+    public void executeQuery(QueryBuilder query){
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query.build());
+            while (resultSet.next()) {
+                String name = resultSet.getString("name");
+                int age = resultSet.getInt(2);
+                boolean car = resultSet.getBoolean("car");
 
+                System.out.println("Name: " + name + " Age: " + age + " Car: " + (car ? "yes" : "no"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
