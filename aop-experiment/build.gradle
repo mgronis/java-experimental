@@ -1,0 +1,10 @@
+apply from: "$rootDir/gradle/java-basics.gradle"
+
+dependencies {
+    compile libs['guava']
+    compile libs['lombok']
+    compile libs['mariadb']
+    testCompile libs['junit']
+    testCompile libs['hamcrest']
+    testCompile libs['mockito']
+}
