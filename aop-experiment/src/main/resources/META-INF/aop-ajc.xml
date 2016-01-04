@@ -1,0 +1,9 @@
+<aspectj>
+    <aspects>
+        <aspect name="aspects.CarAspect"/>
+    </aspects>
+
+    <weaver options="-Xlint:ignore -verbose">
+        <include within='*'/>
+    </weaver>
+</aspectj>
