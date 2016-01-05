@@ -1,5 +1,3 @@
-apply plugin: 'application'
-
 apply from: "$rootDir/gradle/java-basics.gradle"
 
 mainClassName = 'main.AopMain'
