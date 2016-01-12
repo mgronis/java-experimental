@@ -1,5 +1,7 @@
 package main;
 
+import exchangables.Bike;
+import exchangables.BikeFactory;
 import exchangables.Car;
 
 /**
@@ -11,6 +13,9 @@ public class AopMain {
         System.out.println("Lets start experimenting");
 
         new Car().describe();
+
+        System.out.println("A bike has " + new BikeFactory().createBike(3).getGears() + " gears");
+
     }
 
 }

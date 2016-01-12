@@ -1,6 +1,7 @@
 <aspectj>
     <aspects>
         <aspect name="aspects.CarAspect"/>
+        <aspect name="aspects.BikeAspect"/>
     </aspects>
 
     <weaver options="-Xlint:ignore -verbose">
