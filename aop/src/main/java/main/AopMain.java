@@ -1,6 +1,5 @@
 package main;
 
-import exchangables.Bike;
 import exchangables.BikeFactory;
 import exchangables.Car;
 
