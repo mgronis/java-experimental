@@ -1,5 +1,7 @@
 apply from: "$rootDir/gradle/java-basics.gradle"
 
+mainClassName = 'main.EventBusMain'
+
 dependencies {
     compile libs['guava']
     compile libs['lombok']
