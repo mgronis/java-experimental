@@ -1,0 +1,11 @@
+apply from: "$rootDir/gradle/java-basics.gradle"
+
+mainClassName = 'main.RabitmqMain'
+
+dependencies {
+    compile libs['guava']
+    compile libs['lombok']
+    testCompile libs['junit']
+    testCompile libs['hamcrest']
+    testCompile libs['mockito']
+}
