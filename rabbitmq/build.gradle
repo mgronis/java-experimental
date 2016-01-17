@@ -5,6 +5,7 @@ mainClassName = 'main.RabitmqMain'
 dependencies {
     compile libs['guava']
     compile libs['lombok']
+    compile libs['rabbitmq']
     testCompile libs['junit']
     testCompile libs['hamcrest']
     testCompile libs['mockito']
