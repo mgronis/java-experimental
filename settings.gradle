@@ -1,4 +1,4 @@
 include ':sql-builder'
 include ':aop'
 include ':event-bus'
-include ':rabbitmq'
+include ':rabbitmq:basics'
