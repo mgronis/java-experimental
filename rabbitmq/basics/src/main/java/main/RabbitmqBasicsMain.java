@@ -5,7 +5,7 @@ import com.rabbitmq.client.*;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
-public class RabbitmqMain {
+public class RabbitmqBasicsMain {
 
     public static final String QUEUE = "somequeue";
 
