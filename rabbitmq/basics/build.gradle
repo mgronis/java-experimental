@@ -1,6 +1,6 @@
 apply from: "$rootDir/gradle/java-basics.gradle"
 
-mainClassName = 'main.RabitmqBasicsMain'
+mainClassName = 'main.RabbitmqBasicsMain'
 
 dependencies {
     compile libs['guava']
