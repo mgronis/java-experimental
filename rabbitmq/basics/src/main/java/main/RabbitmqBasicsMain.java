@@ -7,7 +7,7 @@ import java.util.concurrent.TimeoutException;
 
 public class RabbitmqBasicsMain {
 
-    public static final String QUEUE = "somequeue";
+    public static final String QUEUE = "basics";
 
     public static void main(String[] args) throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
@@ -17,7 +17,7 @@ public class RabbitmqBasicsMain {
 
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE, false, false, false, null);
-        channel.basicPublish("", QUEUE, null, "hello there!".getBytes());
+        channel.basicPublish("", QUEUE, null, "Hello there!".getBytes());
 
         Consumer consumer = new DefaultConsumer(channel){
             @Override
