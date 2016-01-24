@@ -9,7 +9,7 @@ public class RabbitmqBasicsMain {
 
     public static final String QUEUE = "basics";
 
-    public static void main(String[] args) throws IOException, TimeoutException {
+    public static void main(String[] args) throws IOException, TimeoutException, InterruptedException {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
 
@@ -26,6 +26,7 @@ public class RabbitmqBasicsMain {
             }
         };
         channel.basicConsume(QUEUE, true, consumer);
+        Thread.sleep(50L);
 
         channel.close();
         connection.close();
