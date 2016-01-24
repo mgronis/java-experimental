@@ -48,9 +48,14 @@ public class Worker implements Runnable {
                 }
             };
 
+            channel.basicConsume(QUEUE, true, consumer);
+
             while (readMore) {
-                channel.basicConsume(QUEUE, true, consumer);
+                // Waiting for all messages to arrive
             }
+
+            channel.close();
+            connection.close();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (TimeoutException e) {
