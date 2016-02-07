@@ -1,4 +1,4 @@
-package main.thread;
+package main.threaded;
 
 import com.rabbitmq.client.*;
 import workers.Worker;
