@@ -6,7 +6,7 @@ import workers.Worker;
 import java.io.IOException;
 import java.util.concurrent.*;
 
-public class RabbitmqWorkQueueThreadMain {
+public class RabbitmqWorkQueueThreadedMain {
 
     public static final String QUEUE = "workqueue";
 
