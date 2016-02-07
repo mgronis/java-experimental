@@ -1,4 +1,4 @@
-package main;
+package main.thread;
 
 import com.rabbitmq.client.*;
 import workers.Worker;
@@ -6,7 +6,7 @@ import workers.Worker;
 import java.io.IOException;
 import java.util.concurrent.*;
 
-public class RabbitmqWorkQueueMain {
+public class RabbitmqWorkQueueThreadMain {
 
     public static final String QUEUE = "workqueue";
 

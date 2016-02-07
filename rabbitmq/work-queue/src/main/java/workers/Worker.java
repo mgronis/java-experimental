@@ -5,7 +5,7 @@ import com.rabbitmq.client.*;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
-import static main.RabbitmqWorkQueueMain.QUEUE;
+import static main.thread.RabbitmqWorkQueueThreadMain.QUEUE;
 
 public class Worker implements Runnable {
 
