@@ -1,0 +1,12 @@
+apply from: "$rootDir/gradle/java-basics.gradle"
+
+mainClassName = 'main.RabbitmqPublishSubscribeMain'
+
+dependencies {
+    compile libs['guava']
+    compile libs['lombok']
+    compile libs['rabbitmq']
+    testCompile libs['junit']
+    testCompile libs['hamcrest']
+    testCompile libs['mockito']
+}
