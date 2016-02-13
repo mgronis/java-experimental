@@ -28,7 +28,7 @@ public class RabbitmqRoutingMain {
         channel.queueBind(queue2, EXCHANGE, KAPPA);
 
         Consumer consumer1 = createConsumer(channel, OMEGA);
-        Consumer consumer2 = createConsumer(channel, LAMBDA + " " + KAPPA);
+        Consumer consumer2 = createConsumer(channel, LAMBDA + " & " + KAPPA);
 
         channel.basicConsume(queue1, true, consumer1);
         channel.basicConsume(queue2, true, consumer2);
