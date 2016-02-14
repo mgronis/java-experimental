@@ -7,7 +7,7 @@ import java.util.concurrent.TimeoutException;
 
 public class RabbitmqPublishSubscribeMain {
 
-    public static final String EXCHANGE = "some_exchange";
+    public static final String EXCHANGE = "fanout_exchange";
 
     public static void main(String[] args) throws IOException, TimeoutException, InterruptedException {
         ConnectionFactory factory = new ConnectionFactory();
